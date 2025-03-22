@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: hotel_reservation_prediction
+Version: 1.0
+Author: Bhuwan
+Requires-Dist: pandas
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: requires-dist
