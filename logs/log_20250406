@@ -1,0 +1,30 @@
+2025-04-06 15:46:43,775  - INFO - Successfully loaded the YAML file
+2025-04-06 15:46:44,950  - INFO - CSV file is successfully downloaded to artifacts/raw/raw.csv
+2025-04-06 15:46:45,166  - INFO - Data loaded successfully.
+2025-04-06 15:46:45,168  - INFO - Categorical columns: ['Booking_ID', 'type_of_meal_plan', 'room_type_reserved', 'market_segment_type']
+2025-04-06 15:46:45,168  - INFO - Numerical columns: ['no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests']
+2025-04-06 15:46:45,197  - INFO - Missing values handled successfully.
+2025-04-06 15:46:45,279  - INFO - Categorical variables encoded with OrdinalEncoder successfully.
+2025-04-06 15:46:45,288  - INFO - Features scaled successfully.
+2025-04-06 15:46:45,651  - INFO - Preprocessed data saved successfully.
+2025-04-06 15:46:45,651  - INFO - Preprocessing pipeline completed successfully.
+2025-04-06 15:46:45,651  - INFO - Loading processed training and testing data.
+2025-04-06 15:46:45,726  - INFO - Data loaded successfully.
+2025-04-06 15:46:45,726  - INFO - Preprocessing data: scaling features.
+2025-04-06 15:46:45,729  - INFO - Data preprocessing complete.
+2025-04-06 15:46:45,729  - INFO - Training the model.
+2025-04-06 15:46:47,915  - INFO - Model training complete.
+2025-04-06 15:46:47,915  - INFO - Evaluating model performance.
+2025-04-06 15:46:48,034  - INFO - Model evaluation complete.
+2025-04-06 15:46:48,034  - INFO - Accuracy: 0.8904203997243281
+2025-04-06 15:46:48,034  - INFO - Classification Report:
+2025-04-06 15:46:48,034  - INFO -               precision    recall  f1-score   support
+
+    Canceled       0.88      0.78      0.83      2416
+Not_Canceled       0.90      0.95      0.92      4839
+
+    accuracy                           0.89      7255
+   macro avg       0.89      0.86      0.87      7255
+weighted avg       0.89      0.89      0.89      7255
+
+2025-04-06 15:46:48,079  - INFO - Model saved to artifacts/model/model.joblib.

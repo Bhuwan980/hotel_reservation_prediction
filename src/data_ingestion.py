@@ -4,10 +4,10 @@ import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from config.path_conf import RAW_DIR, RAW_FILE, TRAIN_DATA_FILE, TEST_DATA_FILE, CONFIG_PATH
-from custom_exception import CustomException
+from .custom_exception import CustomException
 from google.cloud import storage
 from utils.common_functions import get_config
-from logger import get_logger
+from .logger import get_logger
 
 
 class DataIngestion:
@@ -38,7 +38,7 @@ class DataIngestion:
         try:
             if os.path.exists(RAW_FILE):
                 df = pd.read_csv(RAW_FILE)
-                train_data, test_data = train_test_split(df, test_size=self.train_ratio, random_state=42)
+                train_data, test_data = train_test_split(df, test_size= 1 - self.train_ratio, random_state=42)
                 train_data.to_csv(TRAIN_DATA_FILE)
                 test_data.to_csv(TEST_DATA_FILE)
 
