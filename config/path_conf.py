@@ -15,3 +15,4 @@ PROCESSED_TEST_TARGET_FILE = os.path.join(PROCESSED_DIR, 'processed_test_target.
 
 MODEL_DIR = 'artifacts/model'
 MODEL_FILE = os.path.join(MODEL_DIR, 'model.joblib')
+SCALER_FILE = os.path.join(MODEL_DIR, 'scalar.joblib')

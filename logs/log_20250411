@@ -1,0 +1,17 @@
+2025-04-11 15:02:45,981  - INFO - Successfully loaded the YAML file
+2025-04-11 15:02:48,959  - INFO - CSV file is successfully downloaded to artifacts/raw/raw.csv
+2025-04-11 15:02:49,175  - INFO - Data loaded successfully.
+2025-04-11 15:02:49,176  - INFO - Categorical columns: ['Booking_ID', 'type_of_meal_plan', 'room_type_reserved', 'market_segment_type']
+2025-04-11 15:02:49,176  - INFO - Numerical columns: ['no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests']
+2025-04-11 15:02:49,203  - INFO - Missing values handled successfully.
+2025-04-11 15:02:49,282  - INFO - Categorical variables encoded with OrdinalEncoder successfully.
+2025-04-11 15:02:49,288  - INFO - Features scaled successfully.
+2025-04-11 15:02:49,644  - INFO - Preprocessed data saved successfully.
+2025-04-11 15:02:49,644  - INFO - Preprocessing pipeline completed successfully.
+2025-04-11 15:02:49,644  - INFO - Loading processed training and testing data.
+2025-04-11 15:02:49,739  - INFO - Data loaded and validated successfully.
+2025-04-11 15:02:49,739  - INFO - Preprocessing data: scaling features.
+2025-04-11 15:02:49,743  - INFO - Scaler saved to disk.
+2025-04-11 15:02:49,743  - INFO - Training the model.
+2025-04-11 15:02:51,400  - INFO - Model training complete.
+2025-04-11 15:02:51,430  - INFO - Model saved to artifacts/model/model.joblib.

@@ -1,0 +1,147 @@
+2025-04-10 09:19:52,163  - INFO - Successfully loaded the YAML file
+2025-04-10 09:19:53,003  - INFO - CSV file is successfully downloaded to artifacts/raw/raw.csv
+2025-04-10 09:19:53,190  - INFO - Data loaded successfully.
+2025-04-10 09:19:53,191  - INFO - Categorical columns: ['Booking_ID', 'type_of_meal_plan', 'room_type_reserved', 'market_segment_type']
+2025-04-10 09:19:53,191  - INFO - Numerical columns: ['no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests']
+2025-04-10 09:19:53,219  - INFO - Missing values handled successfully.
+2025-04-10 09:19:53,305  - INFO - Categorical variables encoded with OrdinalEncoder successfully.
+2025-04-10 09:19:53,312  - INFO - Features scaled successfully.
+2025-04-10 09:19:53,690  - INFO - Preprocessed data saved successfully.
+2025-04-10 09:19:53,690  - INFO - Preprocessing pipeline completed successfully.
+2025-04-10 09:19:53,690  - INFO - Loading processed training and testing data.
+2025-04-10 09:19:53,768  - INFO - Data loaded and validated successfully.
+2025-04-10 09:19:53,768  - INFO - Preprocessing data: scaling features.
+2025-04-10 09:19:53,772  - ERROR - Error preprocessing data: [Errno 2] No such file or directory: 'models/scaler.pkl'
+2025-04-10 09:19:53,772  - ERROR - Error in model training process: Failed to preprocess data: [Errno 2] No such file or directory: 'models/scaler.pkl'
+2025-04-10 09:22:15,578  - INFO - Successfully loaded the YAML file
+2025-04-10 09:22:16,367  - INFO - CSV file is successfully downloaded to artifacts/raw/raw.csv
+2025-04-10 09:22:16,562  - INFO - Data loaded successfully.
+2025-04-10 09:22:16,563  - INFO - Categorical columns: ['Booking_ID', 'type_of_meal_plan', 'room_type_reserved', 'market_segment_type']
+2025-04-10 09:22:16,564  - INFO - Numerical columns: ['no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests']
+2025-04-10 09:22:16,594  - INFO - Missing values handled successfully.
+2025-04-10 09:22:16,674  - INFO - Categorical variables encoded with OrdinalEncoder successfully.
+2025-04-10 09:22:16,679  - INFO - Features scaled successfully.
+2025-04-10 09:22:17,035  - INFO - Preprocessed data saved successfully.
+2025-04-10 09:22:17,035  - INFO - Preprocessing pipeline completed successfully.
+2025-04-10 09:22:17,035  - INFO - Loading processed training and testing data.
+2025-04-10 09:22:17,116  - INFO - Data loaded and validated successfully.
+2025-04-10 09:22:17,116  - INFO - Preprocessing data: scaling features.
+2025-04-10 09:22:17,119  - ERROR - Error preprocessing data: [Errno 2] No such file or directory: 'models/scaler.pkl'
+2025-04-10 09:22:17,119  - ERROR - Error in model training process: Failed to preprocess data: [Errno 2] No such file or directory: 'models/scaler.pkl'
+2025-04-10 09:23:43,141  - INFO - Successfully loaded the YAML file
+2025-04-10 09:23:43,894  - INFO - CSV file is successfully downloaded to artifacts/raw/raw.csv
+2025-04-10 09:23:44,078  - INFO - Data loaded successfully.
+2025-04-10 09:23:44,080  - INFO - Categorical columns: ['Booking_ID', 'type_of_meal_plan', 'room_type_reserved', 'market_segment_type']
+2025-04-10 09:23:44,080  - INFO - Numerical columns: ['no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests']
+2025-04-10 09:23:44,106  - INFO - Missing values handled successfully.
+2025-04-10 09:23:44,184  - INFO - Categorical variables encoded with OrdinalEncoder successfully.
+2025-04-10 09:23:44,190  - INFO - Features scaled successfully.
+2025-04-10 09:23:44,544  - INFO - Preprocessed data saved successfully.
+2025-04-10 09:23:44,544  - INFO - Preprocessing pipeline completed successfully.
+2025-04-10 09:23:44,544  - INFO - Loading processed training and testing data.
+2025-04-10 09:23:44,612  - INFO - Data loaded and validated successfully.
+2025-04-10 09:23:44,612  - INFO - Preprocessing data: scaling features.
+2025-04-10 09:23:44,615  - ERROR - Error preprocessing data: name 'SCALER_FILE' is not defined
+2025-04-10 09:23:44,615  - ERROR - Error in model training process: Failed to preprocess data: name 'SCALER_FILE' is not defined
+2025-04-10 09:24:38,057  - INFO - Successfully loaded the YAML file
+2025-04-10 09:24:38,694  - INFO - CSV file is successfully downloaded to artifacts/raw/raw.csv
+2025-04-10 09:24:38,911  - INFO - Data loaded successfully.
+2025-04-10 09:24:38,913  - INFO - Categorical columns: ['Booking_ID', 'type_of_meal_plan', 'room_type_reserved', 'market_segment_type']
+2025-04-10 09:24:38,913  - INFO - Numerical columns: ['no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests']
+2025-04-10 09:24:38,939  - INFO - Missing values handled successfully.
+2025-04-10 09:24:39,017  - INFO - Categorical variables encoded with OrdinalEncoder successfully.
+2025-04-10 09:24:39,023  - INFO - Features scaled successfully.
+2025-04-10 09:24:39,378  - INFO - Preprocessed data saved successfully.
+2025-04-10 09:24:39,378  - INFO - Preprocessing pipeline completed successfully.
+2025-04-10 09:24:39,378  - INFO - Loading processed training and testing data.
+2025-04-10 09:24:39,446  - INFO - Data loaded and validated successfully.
+2025-04-10 09:24:39,446  - INFO - Preprocessing data: scaling features.
+2025-04-10 09:24:39,449  - ERROR - Error preprocessing data: [Errno 2] No such file or directory: 'artifacts/model/scalar.joblib'
+2025-04-10 09:24:39,449  - ERROR - Error in model training process: Failed to preprocess data: [Errno 2] No such file or directory: 'artifacts/model/scalar.joblib'
+2025-04-10 09:28:17,548  - INFO - Successfully loaded the YAML file
+2025-04-10 09:28:18,420  - INFO - CSV file is successfully downloaded to artifacts/raw/raw.csv
+2025-04-10 09:28:18,614  - INFO - Data loaded successfully.
+2025-04-10 09:28:18,615  - INFO - Categorical columns: ['Booking_ID', 'type_of_meal_plan', 'room_type_reserved', 'market_segment_type']
+2025-04-10 09:28:18,615  - INFO - Numerical columns: ['no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests']
+2025-04-10 09:28:18,647  - INFO - Missing values handled successfully.
+2025-04-10 09:28:18,729  - INFO - Categorical variables encoded with OrdinalEncoder successfully.
+2025-04-10 09:28:18,734  - INFO - Features scaled successfully.
+2025-04-10 09:28:19,089  - INFO - Preprocessed data saved successfully.
+2025-04-10 09:28:19,089  - INFO - Preprocessing pipeline completed successfully.
+2025-04-10 09:28:19,089  - INFO - Loading processed training and testing data.
+2025-04-10 09:28:19,156  - INFO - Data loaded and validated successfully.
+2025-04-10 09:28:19,156  - INFO - Preprocessing data: scaling features.
+2025-04-10 09:28:19,159  - ERROR - Error preprocessing data: [Errno 2] No such file or directory: 'artifacts/model/scalar.joblib'
+2025-04-10 09:28:19,159  - ERROR - Error in model training process: Failed to preprocess data: [Errno 2] No such file or directory: 'artifacts/model/scalar.joblib'
+2025-04-10 09:30:03,274  - INFO - Successfully loaded the YAML file
+2025-04-10 09:30:04,234  - INFO - CSV file is successfully downloaded to artifacts/raw/raw.csv
+2025-04-10 09:30:04,465  - INFO - Data loaded successfully.
+2025-04-10 09:30:04,466  - INFO - Categorical columns: ['Booking_ID', 'type_of_meal_plan', 'room_type_reserved', 'market_segment_type']
+2025-04-10 09:30:04,466  - INFO - Numerical columns: ['no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests']
+2025-04-10 09:30:04,492  - INFO - Missing values handled successfully.
+2025-04-10 09:30:04,570  - INFO - Categorical variables encoded with OrdinalEncoder successfully.
+2025-04-10 09:30:04,576  - INFO - Features scaled successfully.
+2025-04-10 09:30:04,927  - INFO - Preprocessed data saved successfully.
+2025-04-10 09:30:04,928  - INFO - Preprocessing pipeline completed successfully.
+2025-04-10 09:30:04,928  - INFO - Loading processed training and testing data.
+2025-04-10 09:30:04,997  - INFO - Data loaded and validated successfully.
+2025-04-10 09:30:04,998  - INFO - Preprocessing data: scaling features.
+2025-04-10 09:30:05,001  - INFO - Scaler saved to disk.
+2025-04-10 09:30:05,001  - INFO - Training the model.
+2025-04-10 09:30:06,689  - INFO - Model training complete.
+2025-04-10 09:30:06,689  - INFO - Evaluating model performance.
+2025-04-10 09:30:06,803  - ERROR - Error evaluating model: [Errno 2] No such file or directory: 'models/metrics.json'
+2025-04-10 09:30:06,803  - ERROR - Error in model training process: Failed to evaluate model: [Errno 2] No such file or directory: 'models/metrics.json'
+2025-04-10 09:30:35,138  - INFO - Successfully loaded the YAML file
+2025-04-10 09:30:35,846  - INFO - CSV file is successfully downloaded to artifacts/raw/raw.csv
+2025-04-10 09:30:36,026  - INFO - Data loaded successfully.
+2025-04-10 09:30:36,027  - INFO - Categorical columns: ['Booking_ID', 'type_of_meal_plan', 'room_type_reserved', 'market_segment_type']
+2025-04-10 09:30:36,027  - INFO - Numerical columns: ['no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests']
+2025-04-10 09:30:36,053  - INFO - Missing values handled successfully.
+2025-04-10 09:30:36,133  - INFO - Categorical variables encoded with OrdinalEncoder successfully.
+2025-04-10 09:30:36,140  - INFO - Features scaled successfully.
+2025-04-10 09:30:36,491  - INFO - Preprocessed data saved successfully.
+2025-04-10 09:30:36,491  - INFO - Preprocessing pipeline completed successfully.
+2025-04-10 09:30:36,491  - INFO - Loading processed training and testing data.
+2025-04-10 09:30:36,562  - INFO - Data loaded and validated successfully.
+2025-04-10 09:30:36,562  - INFO - Preprocessing data: scaling features.
+2025-04-10 09:30:36,565  - INFO - Scaler saved to disk.
+2025-04-10 09:30:36,565  - INFO - Training the model.
+2025-04-10 09:30:38,271  - INFO - Model training complete.
+2025-04-10 09:30:38,271  - INFO - Evaluating model performance.
+2025-04-10 09:30:38,388  - ERROR - Error evaluating model: [Errno 2] No such file or directory: 'artifacts/models/metrics.json'
+2025-04-10 09:30:38,389  - ERROR - Error in model training process: Failed to evaluate model: [Errno 2] No such file or directory: 'artifacts/models/metrics.json'
+2025-04-10 09:31:21,068  - INFO - Successfully loaded the YAML file
+2025-04-10 09:31:22,395  - INFO - CSV file is successfully downloaded to artifacts/raw/raw.csv
+2025-04-10 09:31:22,617  - INFO - Data loaded successfully.
+2025-04-10 09:31:22,625  - INFO - Categorical columns: ['Booking_ID', 'type_of_meal_plan', 'room_type_reserved', 'market_segment_type']
+2025-04-10 09:31:22,625  - INFO - Numerical columns: ['no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests']
+2025-04-10 09:31:22,668  - INFO - Missing values handled successfully.
+2025-04-10 09:31:22,748  - INFO - Categorical variables encoded with OrdinalEncoder successfully.
+2025-04-10 09:31:22,753  - INFO - Features scaled successfully.
+2025-04-10 09:31:23,106  - INFO - Preprocessed data saved successfully.
+2025-04-10 09:31:23,106  - INFO - Preprocessing pipeline completed successfully.
+2025-04-10 09:31:23,106  - INFO - Loading processed training and testing data.
+2025-04-10 09:31:23,176  - INFO - Data loaded and validated successfully.
+2025-04-10 09:31:23,176  - INFO - Preprocessing data: scaling features.
+2025-04-10 09:31:23,180  - INFO - Scaler saved to disk.
+2025-04-10 09:31:23,180  - INFO - Training the model.
+2025-04-10 09:31:24,863  - INFO - Model training complete.
+2025-04-10 09:31:24,863  - ERROR - Error in model training process: 'ModelTrainer' object has no attribute 'evaluate_model'
+2025-04-10 09:31:43,294  - INFO - Successfully loaded the YAML file
+2025-04-10 09:31:44,201  - INFO - CSV file is successfully downloaded to artifacts/raw/raw.csv
+2025-04-10 09:31:44,383  - INFO - Data loaded successfully.
+2025-04-10 09:31:44,385  - INFO - Categorical columns: ['Booking_ID', 'type_of_meal_plan', 'room_type_reserved', 'market_segment_type']
+2025-04-10 09:31:44,385  - INFO - Numerical columns: ['no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'arrival_date', 'repeated_guest', 'no_of_previous_cancellations', 'no_of_previous_bookings_not_canceled', 'avg_price_per_room', 'no_of_special_requests']
+2025-04-10 09:31:44,411  - INFO - Missing values handled successfully.
+2025-04-10 09:31:44,494  - INFO - Categorical variables encoded with OrdinalEncoder successfully.
+2025-04-10 09:31:44,502  - INFO - Features scaled successfully.
+2025-04-10 09:31:44,884  - INFO - Preprocessed data saved successfully.
+2025-04-10 09:31:44,884  - INFO - Preprocessing pipeline completed successfully.
+2025-04-10 09:31:44,884  - INFO - Loading processed training and testing data.
+2025-04-10 09:31:44,951  - INFO - Data loaded and validated successfully.
+2025-04-10 09:31:44,951  - INFO - Preprocessing data: scaling features.
+2025-04-10 09:31:44,954  - INFO - Scaler saved to disk.
+2025-04-10 09:31:44,954  - INFO - Training the model.
+2025-04-10 09:31:46,620  - INFO - Model training complete.
+2025-04-10 09:31:46,671  - INFO - Model saved to artifacts/model/model.joblib.
