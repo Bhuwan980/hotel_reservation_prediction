@@ -2,3 +2,4 @@ windy-nova-454005-a1-1d914cd7707b.json
 venv/
 mlruns/
 logs/
+artifacts/
