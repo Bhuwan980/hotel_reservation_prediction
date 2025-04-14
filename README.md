@@ -1,7 +1,3 @@
-Here’s a professional and engaging GitHub project description for your Hotel Reservation Cancellation Prediction project:
-
-⸻
-
 🏨 Hotel Reservation Cancellation Prediction
 
 A scalable, production-ready machine learning system designed to predict hotel reservation cancellations. Built with a complete MLOps pipeline using Kubernetes, GitLab CI, Jenkins, Kubeflow, and Minikube on Google Cloud Platform (GCP).
@@ -48,6 +44,3 @@ Achieved high accuracy in identifying likely cancellations using logistic regres
 
 Feel free to fork this repo, suggest improvements, or open an issue! Contributions are welcome.
 
-⸻
-
-Let me know if you’d like this in README.md format or want to include badges (build passing, license, etc.) too!
