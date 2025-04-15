@@ -1,30 +1,22 @@
-FROM python:slim
+# Base image: official Jenkins LTS
+FROM jenkins/jenkins:lts
 
-# Don't write .pyc files and enable stdout logging
-ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
+# Switch to root user to install packages
+USER root
 
-# Set working directory inside the container
-WORKDIR /app
-
-# Install system-level dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    libgomp1 && \
-    apt-get clean && \
+# Install Python, pip, venv, and other essential tools
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    python3 \
+    python3-pip \
+    python3-venv \
+    git \
+    curl \
+    && apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Copy project files into container
-COPY . .
+# (Optional) Upgrade pip
+RUN python3 -m pip install --upgrade pip
 
-# Install Python dependencies from setup.py
-RUN pip install --no-cache-dir -e .
-
-# Optional: Run your pipeline script during build (not always recommended in Dockerfile)
-# You may want to move this to CMD or ENTRYPOINT depending on use case
-RUN python pipeline/pipeline.py
-
-# Expose the port your app runs on
-EXPOSE 8000
-
-# Start the application server
-CMD ["python", "app/server/app.py"]
+# Switch back to Jenkins user for security
+USER jenkins

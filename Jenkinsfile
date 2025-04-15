@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage('Checkout GitHub repo to Jenkins') {
+        stage('Checkout Code from GitHub') {
             steps {
                 checkout scmGit(
                     branches: [[name: '*/main']],
@@ -19,40 +19,28 @@ pipeline {
             }
         }
 
-        stage('Install Python and pip') {
+        stage('Set Up Python Virtual Environment') {
             steps {
                 script {
-                    echo "Installing Python and pip if needed"
-                    sh '''
-                    sudo apt-get update
-                    sudo apt-get install -y python3 python3-pip python3-venv
-                    '''
+                    echo "Creating and activating virtual environment"
+                    sh """
+                        python3 -m venv ${VENV_DIR}
+                        . ${VENV_DIR}/bin/activate
+                        pip install --upgrade pip
+                        pip install -e .
+                    """
                 }
             }
         }
 
-        stage('Set up Virtual Environment') {
+        stage('Run Pipeline Script') {
             steps {
                 script {
-                    echo "Setting up virtual environment"
-                    // Create the virtual environment
-                    sh '''
-                    python3 -m venv ${VENV_DIR}
-                    '''
-                }
-            }
-        }
-
-        stage('Activate Virtual Environment and Install Dependencies') {
-            steps {
-                script {
-                    echo "Activating virtual environment and installing dependencies"
-                    sh '''
-                    # Activate the virtual environment and install dependencies
-                    . ${VENV_DIR}/bin/activate
-                    pip install --upgrade pip
-                    pip install -e .
-                    '''
+                    echo "Running pipeline script"
+                    sh """
+                        . ${VENV_DIR}/bin/activate
+                        python pipeline/pipeline.py
+                    """
                 }
             }
         }
