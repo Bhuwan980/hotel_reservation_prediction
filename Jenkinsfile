@@ -19,6 +19,14 @@ pipeline {
             }
         }
 
+        stage('Install Python (if needed)') {
+            steps {
+                sh '''
+                apt-get update && apt-get install -y python3 python3-pip python3-venv
+                '''
+            }
+        }
+
         stage('Set up Virtual Environment') {
             steps {
                 script {
