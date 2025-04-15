@@ -1,13 +1,13 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.9-slim-buster' // Or your preferred Python image
-            args '-u root' // Run as root inside the container (be mindful of security)
+            image 'python:3.9-slim' // Multi-arch image (supports ARM)
+            args '-u root' // Needed to install system packages
         }
     }
 
     environment {
-        VENV_DIR = '/app/venv' // Adjust path inside the container
+        VENV_DIR = 'venv'
     }
 
     stages {
@@ -24,28 +24,35 @@ pipeline {
             }
         }
 
+        stage('Install venv Support') {
+            steps {
+                sh """
+                    apt-get update && apt-get install -y python3-venv
+                """
+            }
+        }
+
+        stage('Clean Previous venv') {
+            steps {
+                sh "rm -rf ${VENV_DIR}"
+            }
+        }
+
         stage('Set Up Python Virtual Environment') {
             steps {
-                script {
-                    echo "Creating and activating virtual environment"
-                    sh """
-                        python3 -m venv ${VENV_DIR}
-                        ${VENV_DIR}/bin/pip install --upgrade pip
-                        ${VENV_DIR}/bin/pip install -e .
-                    """
-                }
+                sh """
+                    python3 -m venv ${VENV_DIR}
+                    ${VENV_DIR}/bin/pip install --upgrade pip
+                    ${VENV_DIR}/bin/pip install -e .
+                """
             }
         }
 
         stage('Run Pipeline Script') {
             steps {
-                script {
-                    echo "Running pipeline script"
-                    sh """
-                        source ${VENV_DIR}/bin/activate
-                        python pipeline/pipeline.py
-                    """
-                }
+                sh """
+                    ${VENV_DIR}/bin/python pipeline/pipeline.py
+                """
             }
         }
     }
