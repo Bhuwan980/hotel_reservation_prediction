@@ -7,6 +7,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # Set working directory inside the container
 WORKDIR /app
 
+# Ensure you're running commands as root to install packages
+USER root
+
 # Install system-level dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 && \
