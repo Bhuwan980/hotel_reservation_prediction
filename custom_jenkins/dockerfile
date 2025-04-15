@@ -1,13 +1,14 @@
 # Use Jenkins base image (supports ARM64)
 FROM jenkins/jenkins:lts
 
-# Switch to root user to install Docker CLI
+# Switch to root user to install Docker and Python
 USER root
 
-# Install Docker using official script (compatible with ARM64/M1)
+# Install Docker CLI and Python (including pip and venv)
 RUN apt-get update && \
-    apt-get install -y curl gnupg lsb-release && \
-    curl -fsSL https://get.docker.com | sh
+    apt-get install -y curl gnupg lsb-release python3 python3-pip python3-venv && \
+    curl -fsSL https://get.docker.com | sh && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Add jenkins user to docker group
 RUN groupadd -f docker && usermod -aG docker jenkins
