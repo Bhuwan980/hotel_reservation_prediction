@@ -1,31 +1,24 @@
-FROM python:3.9-slim
+FROM --platform=linux/amd64 python:3.9-slim
 
-# Make sure we are root
-USER root
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    DEBIAN_FRONTEND=noninteractive
 
-# Avoid prompts during install
-ENV DEBIAN_FRONTEND=noninteractive
-
-# System dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    libgomp1 \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-# Set workdir
 WORKDIR /app
 
-# Copy project files
+USER root
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgomp1 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 COPY . .
 
-# Install Python dependencies
 RUN pip install --no-cache-dir -e .
 
-# Optional: run preprocessing or pipeline
 RUN python pipeline/pipeline.py
 
-# Expose port
 EXPOSE 8000
 
-# Start app
 CMD ["python", "app/server/app.py"]
