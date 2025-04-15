@@ -24,10 +24,9 @@ pipeline {
                 script {
                     echo "Creating and activating virtual environment"
                     sh """
-                        python3 -m venv ${VENV_DIR}
-                        . ${VENV_DIR}/bin/activate
-                        python -m pip install --upgrade pip
-                        pip install -e .
+                        /usr/bin/python3 -m venv ${VENV_DIR}
+                        ${VENV_DIR}/bin/pip install --upgrade pip
+                        ${VENV_DIR}/bin/pip install -e .
                     """
                 }
             }
@@ -38,8 +37,7 @@ pipeline {
                 script {
                     echo "Running pipeline script"
                     sh """
-                        . ${VENV_DIR}/bin/activate
-                        python pipeline/pipeline.py
+                        ${VENV_DIR}/bin/python pipeline/pipeline.py
                     """
                 }
             }
