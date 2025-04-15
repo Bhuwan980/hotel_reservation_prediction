@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage('Checkout github repo to jenkins') {
+        stage('Checkout GitHub repo to Jenkins') {
             steps {
                 checkout scmGit(
                     branches: [[name: '*/main']],
@@ -19,21 +19,18 @@ pipeline {
             }
         }
 
-        stage('setting up virtual env'){
-            steps{
-                scripts{
-                    echo "setting up venv"
+        stage('Set up Virtual Environment') {
+            steps {
+                script {
+                    echo "Setting up virtual environment"
                     sh '''
-                    pyhton -m venv - ${VENV_DIR}
+                    python -m venv ${VENV_DIR}
                     . ${VENV_DIR}/bin/activate
                     pip install --upgrade pip
                     pip install -e .
-                    
                     '''
-
                 }
             }
         }
-
     }
 }
