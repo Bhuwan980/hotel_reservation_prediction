@@ -1,33 +1,31 @@
-FROM python:slim
+FROM python:3.9-slim
 
-# Don't write .pyc files and enable stdout logging
-ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
-
-# Set working directory inside the container
-WORKDIR /app
-
-# Ensure you're running commands as root to install packages
+# Make sure we are root
 USER root
 
-# Install system-level dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    libgomp1 && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# Avoid prompts during install
+ENV DEBIAN_FRONTEND=noninteractive
 
-# Copy project files into container
+# System dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgomp1 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set workdir
+WORKDIR /app
+
+# Copy project files
 COPY . .
 
-# Install Python dependencies from setup.py
+# Install Python dependencies
 RUN pip install --no-cache-dir -e .
 
-# Optional: Run your pipeline script during build (not always recommended in Dockerfile)
-# You may want to move this to CMD or ENTRYPOINT depending on use case
+# Optional: run preprocessing or pipeline
 RUN python pipeline/pipeline.py
 
-# Expose the port your app runs on
+# Expose port
 EXPOSE 8000
 
-# Start the application server
+# Start app
 CMD ["python", "app/server/app.py"]
