@@ -1,17 +1,12 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.10-slim'
-            args '-u root' // ensures you have root access in container
-        }
-    }
+    agent any
 
     environment {
         VENV_DIR = 'venv'
     }
 
     stages {
-        stage('Checkout') {
+        stage('Checkout GitHub repo to Jenkins') {
             steps {
                 checkout scmGit(
                     branches: [[name: '*/main']],
@@ -26,12 +21,15 @@ pipeline {
 
         stage('Set up Virtual Environment') {
             steps {
-                sh '''
-                python -m venv ${VENV_DIR}
-                . ${VENV_DIR}/bin/activate
-                pip install --upgrade pip
-                pip install -e .
-                '''
+                script {
+                    echo "Setting up virtual environment"
+                    sh '''
+                    python3 -m venv ${VENV_DIR}
+                    . ${VENV_DIR}/bin/activate
+                    pip install --upgrade pip
+                    pip install -e .
+                    '''
+                }
             }
         }
     }
