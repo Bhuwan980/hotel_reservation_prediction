@@ -19,6 +19,20 @@ pipeline {
             }
         }
 
+        stage('Install venv Support') {
+            steps {
+                sh """
+                    apt-get update && apt-get install -y python3-venv
+                """
+            }
+        }
+
+        stage('Clean Previous venv') {
+            steps {
+                sh "rm -rf ${VENV_DIR}"
+            }
+        }
+
         stage('Set Up Python Virtual Environment') {
             steps {
                 script {
